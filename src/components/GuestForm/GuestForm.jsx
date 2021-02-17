@@ -8,6 +8,8 @@ function GuestForm({
   console.log('GuestForm() ');
 
   return (
+    <div>
+      <h2>Add a new guest</h2>
     <form onSubmit={handleSubmit}>
         <label>
           Name
@@ -49,6 +51,7 @@ function GuestForm({
         </div>
         <button type="submit">Add Guest</button>
       </form>
+      </div>
   )
 }
 
