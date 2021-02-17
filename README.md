@@ -10,7 +10,7 @@ Create the new components in the following order (increasing level of difficulty
 
 1. Header [x]
 1. Footer [x]
-1. Guest List
+1. Guest List [x]
 1. Dinner Supplies
 1. Guest Form
 
