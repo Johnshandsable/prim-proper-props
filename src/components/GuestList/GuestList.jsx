@@ -1,3 +1,5 @@
+import GuestItem from '../GuestItem/GuestItem';
+
 function GuestList({guestList, deleteGuest}) {
   console.log('GuestList');
   console.log(guestList);
@@ -14,15 +16,10 @@ function GuestList({guestList, deleteGuest}) {
         </thead>
         <tbody>
           {guestList.map(guest => (
-            <tr key={guest.id}>
-              <td>{guest.name}</td>
-              <td>{String(guest.kidsMeal)}</td>
-              <td>
-                <button data-id={guest.id} onClick={deleteGuest}>
-                  DELETE
-                </button>
-              </td>
-            </tr>
+            <GuestItem
+            key={guest.id}
+            guest={guest} 
+            deleteGuest={deleteGuest}/>
           ))}
         </tbody>
       </table>
