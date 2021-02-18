@@ -43,7 +43,21 @@ function App() {
         alert('Error Adding Guest');
         console.log(err);
       })
-  };
+  }
+
+  const deleteGuest = (event) => {
+    // console.log('event', event.target.dataset.id);
+    const guestId = event.target.dataset.id;
+
+    axios.delete(`/guests/${guestId}`)
+    .then(response => {
+      console.log('DELETE in /guests', response);
+      getGuests();
+    })
+    .catch(error => {
+      console.log('An error occurred', error);
+    })
+  }
 
 
   const handleSubmit = (event) => {
@@ -68,7 +82,8 @@ function App() {
         setNewGuestName = {setNewGuestName}
         setNewGuestMeal = {setNewGuestMeal}
       />
-      < GuestList guestList = {guestList} />
+      < GuestList guestList = {guestList} 
+      deleteGuest = {deleteGuest}/>
       < DinnerSupplies guestList = {guestList} />
       <Footer />
     </div> 

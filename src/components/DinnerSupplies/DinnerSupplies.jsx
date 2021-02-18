@@ -14,6 +14,7 @@ function DinnerSupplies({guestList}) {
         Knives: {guestList.length * 2}
       </div>
     </div>
+    
   )
 }
 
